@@ -47,6 +47,6 @@ Default
                 unknown         	error           	{}
 		hyphen			error			{}
 		space			error			{}
-		EOS			error			{acceptable();}
+		EOS			end			{acceptable();}
 }
 %%

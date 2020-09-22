@@ -58,7 +58,7 @@ class Map1_Default(AnalyzerState):
         try:
             ctxt.acceptable()
         finally:
-            fsm.setState(Map1.error)
+            fsm.setState(Map1.end)
             fsm.getState().Entry(fsm)
 
 class Map1_start(Map1_Default):
