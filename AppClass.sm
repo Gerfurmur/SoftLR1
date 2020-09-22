@@ -1,0 +1,52 @@
+
+%start Map1::start
+%class Analyzer
+
+%map Map1
+%%
+// State	Transition		End State		Action(s)
+start {
+		X			command_name		{save_name();}
+}
+
+command_name {
+		X			nil			{save_name();}
+		space			next			{}
+}
+
+next {
+		hyphen			is_option		{}
+		X			atribute		{}
+		space			nil			{}
+}
+
+is_option {
+		X			option			{}
+}
+
+option {
+		X			nil			{}
+		space			next			{}
+}
+
+atribute {
+		X			nil			{}
+		space			nil			{}
+}
+
+end {}
+
+error {
+		X			nil			{}
+		EOS			nil			{unacceptable();}
+
+}
+
+Default
+{
+                unknown         	error           	{}
+		hyphen			error			{}
+		space			error			{}
+		EOS			error			{acceptable();}
+}
+%%

@@ -1,0 +1,26 @@
+hello world
+ is correct
+hi3
+ is incorrect
+hi 3
+ is incorrect
+3
+ is incorrect
+hi
+ is correct
+hi -op
+ is correct
+hi   at
+ is correct
+  hi a
+ is incorrect
+hi a  a
+ is correct
+hi   -op  at
+ is correct
+hi  -op a  a
+ is correct
+hi -op   -op a
+ is correct
+Hi
+ is correct
