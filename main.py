@@ -17,9 +17,9 @@ def read_text(read_from, used_checker):
                 for line in f:
                     if used_checker == '1':
                         checker = smc_an.AppClass()
-                        res = checker.check_string(line[:-1])
+                        res = checker.check_string(line)
                     else:
-                        res = analyzer.check(line[:-1])
+                        res = analyzer.check(line)
                     with open('check out.txt', 'a') as wf:
                         if res[0]:
                             wf.write(line + ' is correct\n')

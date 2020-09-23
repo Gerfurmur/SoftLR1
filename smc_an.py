@@ -24,6 +24,8 @@ class AppClass:
                 self._fsm.space()
             elif c == '-':
                 self._fsm.hyphen()
+            elif c == '\n':
+                self._fsm.EOS()
             else:
                 self._fsm.unknown()
         self._fsm.EOS()
