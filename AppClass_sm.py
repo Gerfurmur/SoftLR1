@@ -107,6 +107,11 @@ class Map1_next(Map1_Default):
 
 class Map1_is_option(Map1_Default):
 
+    def EOS(self, fsm):
+        fsm.getState().Exit(fsm)
+        fsm.setState(Map1.error)
+        fsm.getState().Entry(fsm)
+
     def X(self, fsm):
         fsm.getState().Exit(fsm)
         fsm.setState(Map1.option)
